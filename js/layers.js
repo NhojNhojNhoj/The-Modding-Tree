@@ -29,18 +29,26 @@ addLayer("p", {
     11: { 
     title: "Small Beginnings",
     description: "1.5x your point gain.",
-    cost: new Decimal(5),},
+    cost: new Decimal(1),},
     
     12: { 
     title: "Slightly Bigger Beginnings",
     description: "More Bonus Points = More Gain",
-    cost: new Decimal(15),
-effect() {
+    cost: new Decimal(5),
+    effect() {
         return player[this.layer].points.add(1).pow(0.5)
     },
     effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }, // Add formatting to the effect
-},
-
+    },
+    13: { 
+    title: "Medium Beginnings",
+    description: "More Bonus Points = More Gain",
+    cost: new Decimal(25),
+    effect() {
+        return player[this.layer].points.add(1).pow(0.5)
+    },
+    effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }, // Add formatting to the effect
+    },
 
     },
 })
