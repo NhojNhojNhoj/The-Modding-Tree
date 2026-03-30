@@ -33,7 +33,7 @@ addLayer("p", {
     
     12: { 
     title: "Slightly Bigger Beginnings",
-    description: "1.5x your point gain.",
+    description: "More Bonus Points = More Gain",
     cost: new Decimal(15),
 effect() {
         return player[this.layer].points.add(1).pow(0.5)
